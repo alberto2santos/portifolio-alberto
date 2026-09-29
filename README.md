@@ -7,7 +7,7 @@ Página única, mobile-first, construída com foco em performance, acessibilidad
 
 ![React](https://img.shields.io/badge/React-18-149ECA?style=for-the-badge&logo=react&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![License](https://img.shields.io/badge/Licen%C3%A7a-MIT-3ED8C2?style=for-the-badge)
 
 [**🔗 Ver demo ao vivo**](https://alberto-portifolio.vercel.app) · [Reportar um bug](../../issues)
@@ -26,6 +26,7 @@ Página única, mobile-first, construída com foco em performance, acessibilidad
 - **Animações de scroll-reveal** via `IntersectionObserver`, respeitando `prefers-reduced-motion`
 - **Formulário de contato funcional** (Web3Forms — sem backend próprio) + botão direto de WhatsApp
 - **SEO técnico**: meta tags completas, Open Graph, dados estruturados `schema.org/Person`, HTML semântico
+- **Analytics**: métricas de visitantes e visualizações com Vercel Web Analytics
 - **Acessível**: skip-link, foco visível no teclado, contraste AA, `aria-label`s
 - **Leve de verdade**: sem biblioteca de UI, CSS puro, imagens em WebP comprimidas
 - **Componentizado**: `Header`, `ContactForm` e `ProjectCard` isolados; conteúdo separado da apresentação em `data.ts`
@@ -37,12 +38,14 @@ Página única, mobile-first, construída com foco em performance, acessibilidad
 | Front-end | React 18 · TypeScript · Vite |
 | Estilo | CSS puro (custom properties, sem framework) |
 | Formulário | [Web3Forms](https://web3forms.com) |
+| Analytics | [Vercel Web Analytics](https://vercel.com/docs/analytics/quickstart) |
 | Deploy | Vercel |
 
 ## 📁 Estrutura
 
 ```
 src/
+  main.tsx                # ponto de entrada + Vercel Analytics
   App.tsx                 # composição das seções da página
   components/
     Header.tsx             # navegação + menu mobile
@@ -83,7 +86,8 @@ Cadastro gratuito em [web3forms.com](https://web3forms.com) (só pede um e-mail,
 1. Suba este repositório no GitHub.
 2. Em [vercel.com](https://vercel.com) → **Add New Project** → importe o repositório (Vite é detectado automaticamente).
 3. Em **Project Settings → Environment Variables**, adicione `VITE_WEB3FORMS_KEY` com o mesmo valor do seu `.env`.
-4. **Deploy.**
+4. No painel do projeto, abra **Analytics** e habilite **Web Analytics**.
+5. **Faça o deploy** para começar a coletar visualizações e visitas. Os dados aparecem no painel Analytics após as visitas ao site.
 
 ## 📬 Contato
 
