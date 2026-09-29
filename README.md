@@ -76,7 +76,7 @@ O formulário de contato precisa de uma chave gratuita do Web3Forms:
 ```bash
 cp .env.example .env
 # edite o .env e cole sua chave:
-# VITE_WEB3FORMS_KEY=sua_chave_aqui
+# WEB3FORMS_KEY=sua_chave_aqui
 ```
 
 Cadastro gratuito em [web3forms.com](https://web3forms.com) (só pede um e-mail, sem cartão).
@@ -85,7 +85,7 @@ Cadastro gratuito em [web3forms.com](https://web3forms.com) (só pede um e-mail,
 
 1. Suba este repositório no GitHub.
 2. Em [vercel.com](https://vercel.com) → **Add New Project** → importe o repositório (Vite é detectado automaticamente).
-3. Em **Project Settings → Environment Variables**, adicione `VITE_WEB3FORMS_KEY` com o mesmo valor do seu `.env`.
+3. Em **Project Settings → Environment Variables**, adicione `WEB3FORMS_KEY` com o mesmo valor do seu `.env`.
 4. No painel do projeto, abra **Analytics** e habilite **Web Analytics**.
 5. **Faça o deploy** para começar a coletar visualizações e visitas. Os dados aparecem no painel Analytics após as visitas ao site.
 

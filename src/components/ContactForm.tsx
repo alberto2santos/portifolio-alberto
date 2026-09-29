@@ -1,7 +1,7 @@
 import { useState, FormEvent } from "react";
 
 // Chave gratuita do https://web3forms.com, lida de .env.
-const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY ?? "";
+const WEB3FORMS_KEY = import.meta.env.WEB3FORMS_KEY ?? "";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -11,7 +11,7 @@ export default function ContactForm() {
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (!WEB3FORMS_KEY) {
-      console.error("VITE_WEB3FORMS_KEY não configurada — veja .env.example e o README.");
+      console.error("WEB3FORMS_KEY não configurada — veja .env.example e o README.");
       setStatus("error");
       return;
     }
